@@ -1,0 +1,155 @@
+/* style.css */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #eaeaea;
+}
+
+nav {
+    width: 100%; /* Faz o navbar ter a largura total da página */
+    background-color: #222;
+    overflow: hidden; /* Garante que o conteúdo do navbar não ultrapasse a largura da página */
+}
+
+.logo {
+    float: left; /* Alinha o logo à esquerda */
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff5733;
+    padding: 14px 16px; /* Ajusta o espaçamento ao redor do logo */
+}
+
+.nav-links {
+    float: right; /* Alinha os links à direita */
+    list-style: none;
+}
+
+/* style.css */
+.nav-links li {
+    display: inline-block; /* Exibe os itens da lista na horizontal */
+    margin-right: -4px; /* Remove o espaço extra entre os itens da lista */
+}
+
+.nav-links a::after {
+    content: '|'; /* Adiciona uma barra após cada link */
+    padding-left: 10px; /* Espaçamento à esquerda da barra */
+}
+
+.nav-links li:last-child a::after {
+    content: ''; /* Remove a barra do último item da lista */
+}
+
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 16px; /* Ajusta o espaçamento ao redor dos links */
+    display: block; /* Faz cada link preencher o espaço horizontal */
+}
+
+.nav-links a:hover {
+    background-color: #ddd; /* Cor de fundo ao passar o mouse */
+    color: black;
+}
+
+#hero {
+    background: url('https://i.imgur.com/OFbGB9d.png') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff5733;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #ff2e00;
+}
+
+#about, #projects, #contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.projects-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+}
+
+.projects-card h3 {
+    margin-top: 0;
+}
+
+#contact p {
+    font-size: 18px;
+}
+
+#contact a {
+    color: #ff5733;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Restante do CSS permanece igual */
+
+@media (max-width: 768px) {
+    .nav-links li {
+        display: block; /* Exibe os itens da lista na vertical em telas menores */
+        flex-direction: column;
+        gap: 10px;
+    }
+    #hero {
+        height: 300px;
+    }
+    #hero-content h1 {
+        font-size: 32px;
+    }
+    #hero-content p {
+        font-size: 18px;
+    }
+    .projects-card {
+        width: 100%;
+    }
+}
